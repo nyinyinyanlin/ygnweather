@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const rqpr = require('request-promise');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 5000;
 const options = {
         method: 'GET',
         uri: 'http://api.openweathermap.org/data/2.5/weather',
@@ -84,7 +84,7 @@ getWeatherCondition();
 app.engine('handlebars',exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use('/public',express.static('public'));
-app.get('/weather',function(req,res){
+app.get('/',function(req,res){
 	if (ygnweather) {
 		weather = ygnweather.weather[0];
 		data = ygnweather.main;
