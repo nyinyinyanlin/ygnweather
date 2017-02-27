@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			html, body {
+				height: 100%%;
+				margin: 0;
+			}
+			#mainbody {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				width: 100%;
+				height: 100%;
+				background-color: red;
+			}
+			#weathericon {
+				align-self: center;
+				background-color: green;
+				width: 50px;
+				height: 50px;
+				margin: 5px;
+			}
+			#textbox {
+				align-self: center;
+				text-align: center;
+				width:70%;
+				padding: 20px;
+				background-color: skyblue;
+				margin: 10px;
+			}
+			#creditbox {
+				align-self: center;
+				text-align: center;
+				width: auto;
+				height: auto;
+				padding: 10px;
+				background-color: lightgreen;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mainbody">
+			<div id="weathericon">
+				{{{icon}}}
+			</div>
+			<div id="textbox">
+				{{{weather}}}	
+			</div>
+			<div id="creditbox">
+				{{{credit}}}
+			</div>
+		</div>
+	</body>
+</html>
