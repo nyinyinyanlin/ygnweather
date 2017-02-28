@@ -29,6 +29,7 @@
 				align-self: center;
 				text-align: center;
 				margin: 5px;
+				display: none;
 			}
 			#textbox {
 				align-self: center;
@@ -37,6 +38,7 @@
 				width:auto;
 				padding: 20px;
 				margin: 10px;
+				display: none;
 			}
 			#creditbox {
 				align-self: center;
@@ -47,7 +49,8 @@
 				height: auto;
 				padding: 10px;
 				margin: 20px;
-				font-size: large;
+				font-size: normal;
+				display: none;
 			}
 			#databox {
 				align-self: center;
@@ -67,6 +70,9 @@
 		<script type="text/javascript">
 			$(function(){
 				$("#databox").hide();
+				$("#weathericon").fadeIn(2000);
+				$("#textbox").fadeIn(2500);
+				$("#creditbox").fadeIn(2750);
 				$("#weathericon").mouseenter(function(){
 					$("#databox").fadeIn(400);
 					});
