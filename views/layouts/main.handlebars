@@ -20,6 +20,8 @@
 			}
 			#mainbody {
 				display: flex;
+				display: -webkit-flex;
+				display: -moz-flex;
 				justify-content: center;
 				flex-direction: column;
 				width: 100%;
@@ -41,25 +43,21 @@
 				display: none;
 			}
 			#creditbox {
-				align-self: center;
 				text-align: center;
 				position: fixed;
 				bottom: 10px;
-				width: auto;
 				margin: auto;
+				width: 100%;
 				padding: 10px;
 				font-size: normal;
 				display: none;
 			}
 			#databox {
-				align-self: center;
 				text-align: center;
-				align-items: center;
 				position: fixed;
 				top: 20px;
-				width: auto;
-				height: auto;
-				margin: 10px;
+				width: 100%;
+				margin: auto;
 				font-size: large;
 				display: none;
 				}
@@ -83,16 +81,20 @@
 	</head>
 	<body>
 		<div id="mainbody">
-			<div id="databox">
-				{{{temp}}}&deg;စင်တီဂရိတ်&nbsp;&nbsp;{{{press}}}ပါစကယ်&nbsp;&nbsp;{{{humidity}}}&#37;&nbsp;&nbsp;&nbsp;{{{wind}}}ကီလိုမီတာ/နာရီ
+			<div>
+				<div id="databox">
+					{{{temp}}}&deg;စင်တီဂရိတ်&nbsp;&nbsp;{{{press}}}ပါစကယ်&nbsp;&nbsp;{{{humidity}}}&#37;&nbsp;&nbsp;&nbsp;{{{wind}}}ကီလိုမီတာ/နာရီ
+				</div>
 			</div>
 			<i id="weathericon" class="owf owf-3x owf-{{{icon}}}">
 			</i>
 			<div id="textbox">
 				{{{weather}}}	
 			</div>
-			<div id="creditbox">
-				{{{credit}}}
+			<div>
+				<div id="creditbox">
+					{{{credit}}}
+				</div>
 			</div>
 		</div>
 	</body>
