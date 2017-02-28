@@ -4,7 +4,7 @@
   "description": "A simple app to bring you weather condition of Yangon with a simple UI",
   "main": "index.js",
   "scripts": {
-    "start": "nodejs index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nyi Nyi Nyan Lin",
@@ -16,7 +16,7 @@
     "request-promise": "^4.1.1"
   },
   "engines": {
-	"nodejs": "4.6.2"
+	"node": "4.6.2"
   },
   "keywords": [
         "yangon",
