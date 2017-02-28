@@ -34,7 +34,7 @@
 				align-self: center;
 				text-align: center;
 				font-size: 2em;
-				width:70%;
+				width:auto;
 				padding: 20px;
 				margin: 10px;
 			}
@@ -48,9 +48,10 @@
 				padding: 10px;
 				margin: 20px;
 			}
-			#numberbox {
+			#databox {
 				align-self: center;
 				text-align: center;
+				align-items: center;
 				position: fixed;
 				top: 20px;
 				width: auto;
@@ -63,20 +64,20 @@
 		<script src="/public/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				$("#numberbox").hide();
+				$("#databox").hide();
 				$("#weathericon").mouseenter(function(){
-					$("#numberbox").fadeIn(400);
+					$("#databox").fadeIn(400);
 					});
 				$("#weathericon").mouseleave(function(){
-					$("#numberbox").fadeOut(400);
+					$("#databox").fadeOut(400);
 					})
 				});
 		</script>
 	</head>
 	<body>
 		<div id="mainbody">
-			<div id="numberbox">
-				{{{temp}}}&deg;စင်တီဂရိတ်&nbsp;&nbsp;{{{press}}}ပါစကယ်&nbsp;&nbsp;{{{humidity}}}&#37;&nbsp;&nbsp;{{{wind}}}ကီလိုမီတာ/နာရီ
+			<div id="databox">
+				{{{temp}}}&deg;စင်တီဂရိတ်&nbsp;&nbsp;{{{press}}}ပါစကယ်&nbsp;&nbsp;{{{humidity}}}&#37;&nbsp;&nbsp;&nbsp;{{{wind}}}ကီလိုမီတာ/နာရီ
 			</div>
 			<i id="weathericon" class="owf owf-3x owf-{{{icon}}}">
 			</i>

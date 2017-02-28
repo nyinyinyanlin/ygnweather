@@ -3,7 +3,6 @@ const exphbs = require('express-handlebars');
 const rqpr = require('request-promise');
 const path = require('path');
 const app = express();
-const port = 5000;
 const options = {
         method: 'GET',
         uri: 'http://api.openweathermap.org/data/2.5/weather',
@@ -37,7 +36,7 @@ var weatherObj = {
 	761:,762:,
 	771:,
 	791:,*/
-	800:"တိမ်ကင်းစင်",801:"တိမ်အနည်းငယ်ဖုံး",/*802:,803:,804:,
+	800:"တိမ်ကင်းစင်",801:"တိမ်အနည်းငယ်ဖုံး",802:"တိမ်တွေပြန့်ကျဲနေ",803:"တိမ်အပြည့်ဖုံး",/*
 	900:,901:,902:,903:,904:,905:,906:,*/
 	951:"ရာသီဥတုတည်ငြိမ်"/*,952:,953:,954:,956:,957:,958:,959:,
 	960:,961:,962:,*/
@@ -81,6 +80,7 @@ function getWeatherCondition(){
 
 getWeatherCondition();
 
+app.set('port',(process.env.PORT || 5000))
 app.engine('handlebars',exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use('/public',express.static('public'));
@@ -116,9 +116,9 @@ app.get('/',function(req,res){
 		}
 	});
 
-app.listen(port,function(err){
+app.listen(app.get('port'),function(err){
 		if (err) {
-			return console.log("Error listening on port: 3000",err);
+			return console.log("Error listening",err);
 		}
-		console.log("Server listening on port: 3000");
+		console.log("Server listening on port");
 	});

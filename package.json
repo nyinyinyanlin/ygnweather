@@ -1,18 +1,26 @@
 {
   "name": "ygnweather",
   "version": "1.0.0",
-  "description": "A weather map city Yangon",
+  "description": "A simple app to bring you weather condition of Yangon with a simple UI",
   "main": "index.js",
   "scripts": {
     "start": "nodejs index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nyi Nyi Nyan Lin",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
-  }
+  },
+  "engines": {
+	"nodejs": "4.6.2"
+  },
+  "keywords": [
+        "yangon",
+	"weather",
+	"ygnbinhaus"
+	],
 }
